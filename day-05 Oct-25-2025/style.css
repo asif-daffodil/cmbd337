@@ -1,0 +1,28 @@
+.para2 {
+    /* background: rgb(128, 79, 243); */
+    background: rgba(128, 79, 243, 0.5);
+    /* background: #ff00bb; */
+    color: #f00;
+    width: 600px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 50px;
+    text-decoration: underline;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    /* margin: 20px 30px 40px 50px; */
+    /* margin: 20px 30px; */
+    /* margin: 20px 30px 40px; */
+    margin-top: -10px;
+    /* border: 20px solid black; */
+    /* border-width: 20px;
+    border-style: double;
+    border-color: #000; */
+    border-top: 20px solid;
+    border-right: 20px double;
+    border-left: 20px double;
+    border-bottom: 20px solid;
+    border-radius: 20px;
+}

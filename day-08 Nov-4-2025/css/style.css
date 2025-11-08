@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div1, .div2 {
+    width: 300px;
+    height: 200px;
+    background: blue;
+    margin: 20px;
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 1px 1px 1px yellow;
+    box-shadow: 10px 10px 10px #000, 0px 0px 100px #000 inset;
+}
+
+.div1 {
+    padding: 20px;
+    position: relative;
+}
+
+.div1::before {
+    content: "50%";
+    width: max-content;
+    /* padding: 4px 8px; */
+    font-size: 14px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background: red;
+    border-radius: 50%;
+    /* aspect-ratio: 1/1; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.dhaka {
+    width: 300px;
+    height: 200px;
+    background: green;
+    margin: 20px;
+}
+
+.dhaka > .dhanmondi {
+    width: 140px;
+    height: 140px;
+    background: blue;
+}
+
+/* .dhaka + p {
+    color: maroon;
+} */
+.dhaka ~ p {
+    color: maroon;
+}
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+a:visited {
+    color: hotpink;
+    text-decoration: none;
+}
+a:hover {
+    color: green;
+    text-decoration: none;
+}
+a:active {
+    color: yellow;
+    text-decoration: none;
+}
+
+p::first-letter {
+    font-size: 22px;
+}
+
+p::before {
+    content: "Hi. ";
+}
+
+p::after {
+    content: " Thank you.";
+}
+
+.bg-img {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border: 1px solid #000;
+    background-image: url("../images/rocket.webp");
+    /* background-size: 100% 100%; */
+    /* background-size: contain; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gradient {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to top right, red, white, green);
+    margin: 20px;
+}
+
+.gradient2 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(white, red, black 75%);
+    margin: 20px;
+}
+
+.para {
+    width: 300px;
+    border: 1px solid #000;
+    margin: 20px;
+    white-space: nowrap;
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
+    overflow-x: scroll;
+}
