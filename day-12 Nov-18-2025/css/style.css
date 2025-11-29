@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main {
+    width: 150px;
+    height: 150px;
+    /* animation-name: mainAnimation; */
+    /* animation-duration: 2s; */
+    /* animation-iteration-count: infinite; */
+    /* animation-timing-function: linear; */
+    animation: mainAnimation 2s infinite linear;
+    position: absolute;
+    top: 200px;
+}
+
+@keyframes mainAnimation {
+    0% {
+        background: limegreen;
+        transform: rotateZ(0deg);
+        left: calc(0% - 150px);
+    }
+    50% {
+        background: orange;
+        transform: rotateZ(360deg);
+        left: calc(50% - 75px);
+    }
+    100% {
+        background: limegreen;
+        transform: rotateZ(720deg);
+        left: calc(100% + 150px);
+    }
+}

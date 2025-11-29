@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div1 {
+    width: 150px;
+    height: 150px;
+    background-color: teal;
+    margin: 20px;
+    /* transition: transform 0.5s ease 0.3s; */
+    /* transition: all 0.5s ease 0.3s; */
+    transition: 0.5s;
+}
+
+.div1:hover {
+    /* transform: translateX(20px); */
+    /* transform: translateY(20px); */
+    /* transform: translateX(20px) translateY(20px); */
+    /* transform: translate(20px, 20px); */
+    /* transform: rotateZ(180deg); */
+    transform: translate(10px, 10px) skew(5deg, 5deg) rotate(360deg) scale(1.2);
+}
