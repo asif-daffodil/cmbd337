@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day-32-jan-27-2026</title>
+  </head>
+  <body>
+    <div id="app"></div>  
+    <div class="border rounded mx-auto my-3 w-max p-3">
+      <h2 class="mb-3">Registration Form</h2>
+      <form action="" id="myForm">
+        <div class="mb-3">
+          <input type="text" placeholder="Your name" name="name" class="border rounded p-2 w-full">
+          <div class="text-xs text-red-600" id="errName"></div>
+        </div>
+        <div class="mb-3">
+          <input type="text" placeholder="Email Address" name="email" class="border rounded p-2 w-full">
+          <div class="text-xs text-red-600" id="errEmail"></div>
+        </div>
+        <button type="submit" class="border rounded px-4 py-1 cursor-pointer">Submit</button>
+      </form>
+      <div id="showResult" class="text-green-600 mt-3 w-72"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

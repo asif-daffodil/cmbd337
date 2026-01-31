@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nemo praesentium impedit voluptate itaque aperiam tempore provident cumque dolorum adipisci sunt accusamus eum error magnam facere, saepe quia, omnis voluptatibus explicabo! Aperiam perspiciatis, excepturi corporis enim laboriosam repellendus iure animi ipsa autem, sit nam veniam, voluptates fuga qui distinctio porro non exercitationem quis. Maxime vel laboriosam animi, blanditiis nisi neque.
+    </p>
+    <a href="./logout.html"><button>Logout</button></a>
+    <script>
+        if(!localStorage.getItem('isLoggedIn')) {
+            location.href = './login.html';
+        }
+    </script>
+</body>
+</html>

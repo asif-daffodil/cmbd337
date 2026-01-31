@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Page</title>
+</head>
+<body>
+    <a href="./">Home page</a>
+    <div id="msg"></div>
+    <script>
+        const msg = document.getElementById('msg');
+        cookieStore.get('username').then(cookie => {
+            if(cookie) {
+                msg.textContent = `Welcome, ${cookie.value}`;
+            } else {
+                msg.textContent = 'No username cookie found.';
+            }
+        });
+    </script>
+</body>
+</html>

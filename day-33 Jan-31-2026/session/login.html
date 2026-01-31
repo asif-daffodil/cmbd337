@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Login Here</h1>
+    <form action="" id="loginForm">
+        <input type="email" placeholder="Emaill Address" name="ue"><br><br>
+        <input type="password" placeholder="Password" name="up"><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <script>
+        if(localStorage.getItem('isLoggedIn')) {
+            location.href = './index.html';
+        }
+
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(loginForm);
+            const email = formData.get('ue');
+            const password = formData.get('up');
+            if(!email || !password) {
+                alert('Please provide valid credentials');
+            } else {
+                if(email === 'asif@dti.ac' && password === '12345') {
+                    localStorage.setItem('isLoggedIn', 'true');
+                    location.href = './index.html';
+                } else {
+                    alert('Invalid credentials');
+                }
+                
+            }
+        })
+        
+    </script>
+</body>
+</html>

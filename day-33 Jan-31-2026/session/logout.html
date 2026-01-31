@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Page</title>
+</head>
+<body>
+    <h1>
+        You have been logged out.
+        <script>
+            localStorage.removeItem('isLoggedIn');
+            setTimeout(() => {
+                location.href = './login.html';
+            }, 2000);
+        </script>
+    </h1>
+</body>
+</html>

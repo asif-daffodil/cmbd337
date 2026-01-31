@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="setCookie">
+        <input type="text" placeholder="Your Name" name="yName">
+        <button type="submit">Set Cookie</button>
+    </form>
+
+    <script>
+        const setCookie = document.getElementById('setCookie');
+        setCookie.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(setCookie);
+            const yName = formData.get('yName');
+            const expires = Date.now() + (60 * 1000);
+
+            if (window.cookieStore?.set) {
+                cookieStore.set({ name: 'username', value: yName, expires, path: '/' }).then(() => {
+                    location.href = './';
+                });
+            } else {
+                document.cookie = `username=${encodeURIComponent(yName)}; Max-Age=60; Path=/`;
+                location.href = './';
+            }
+        })
+    </script>
+</body>
+</html>
